@@ -1,0 +1,53 @@
+{
+    "name": "DRM Uploader Bot",
+    "description": "DRM Video Uploader Bot for Telegram",
+    "logo": "https://tinypic.host/image/Screenshot-2025-03-19-06-40-21-30.3gKoOw",
+    "keywords": [
+        "telegram",
+        "video",
+        "drm",
+        "uploader",
+        "pyrogram"
+    ],
+    "repository": "https://github.com/yourusername/drm-uploader",
+    "stack": "container",
+    "env": {
+        "API_ID": {
+            "description": "Telegram API ID from my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Telegram API Hash from my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Bot Token from @BotFather",
+            "value": "",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "Your Telegram User ID",
+            "value": "7531518197",
+            "required": true
+        },
+        "ADMIN_ID": {
+            "description": "Admin Telegram User ID",
+            "value": "7531518197",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "https://github.com/amivin/aria2-heroku.git"
+        },
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ]
+}
